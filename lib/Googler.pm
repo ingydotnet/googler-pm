@@ -5,21 +5,21 @@ extends 'Cog::App';
 
 our $VERSION = '0.01';
 
-use constant webapp_class => 'Strategic::StoryBoard::WebApp';
+use constant webapp_class => 'Googler::WebApp';
 
-package Strategic::StoryBoard::WebApp;
+package Googler::WebApp;
 use Mouse;
 extends 'Cog::WebApp';
 
 use constant site_navigation => [
     '()',
+    ['Gugod' => '/gugod'],
+    ['Ingy' => '/ingy'],
 ];
-
 use constant url_map => [
     '()',
     ['/(.*)' => 'search', ('$1')],
 ];
-
 use constant js_files => [
     'googler.js',
 ];
